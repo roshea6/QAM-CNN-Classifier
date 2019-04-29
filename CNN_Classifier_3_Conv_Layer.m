@@ -66,3 +66,11 @@ YPred = classify(net,validationSet);
 YValidation = validationSet.Labels;
 
 accuracy = sum(YPred == YValidation)/numel(YValidation)
+
+%To save the trained Network call "save net" or set a variable such as
+%TrainedNet = to net and then call "save TrainedNet"
+
+%To load the trained network into a workspace call "load TrainedNet_3Conv"
+
+%To use the trained network to classify spectrogram images call
+%classify(TrainedNet, imread("nameOfLocalFile.jpg")) or classify(TrainedNet, readimage(YourImageDataStore, indexOfImage))
