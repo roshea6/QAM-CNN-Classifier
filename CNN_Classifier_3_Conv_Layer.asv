@@ -16,8 +16,7 @@ trainingSet = imageDatastore(DataDir, 'IncludeSubfolders', true, 'LabelSource', 
 
 validationSet = imageDatastore(ValDir, 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
 
-%Uncomment this if all data is going to be stored in one directory instead
-%of split manually between training and testing
+%Uncomment this to use randoml
 %[trainingSet,validationSet] = splitEachLabel(trainingSet,.9,'randomize');
 
 %Show the breakdown of the Data directory
